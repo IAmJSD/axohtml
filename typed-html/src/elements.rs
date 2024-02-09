@@ -207,6 +207,7 @@ declare_elements! {
         src: Uri,
         srcset: String, // FIXME this is much more complicated
         usemap: String, // FIXME should be a fragment starting with '#'
+        loading: String, // FIXME this is much more complicated
         width: usize,
     } in [FlowContent, PhrasingContent, EmbeddedContent];
     input {
