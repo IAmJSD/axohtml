@@ -45,3 +45,15 @@ jobs:
       - name: Run cargo test
         run: |
           cargo test --workspace
+  test-nightly:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install nightly toolchain
+        run: rustup toolchain install nightly
+      - name: Run cargo test
+        run: |
+          cargo +nightly test --workspace
