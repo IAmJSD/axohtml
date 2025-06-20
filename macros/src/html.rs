@@ -196,7 +196,7 @@ impl Element {
                         eprintln_msg += &format!(
                             "{}:{}:{}: ",
                             span.unstable()
-                                .source_file()
+                                .source()
                                 .path()
                                 .to_str()
                                 .unwrap_or("unknown"),
@@ -337,7 +337,7 @@ impl Element {
                         eprintln_msg += &format!(
                             "{}:{}:{}: ",
                             span.unstable()
-                                .source_file()
+                                .source()
                                 .path()
                                 .to_str()
                                 .unwrap_or("unknown"),
